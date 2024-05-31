@@ -89,7 +89,6 @@ a:hover {
   width: 100%;
 }
 
-
 .overlay-mf {
   background-color: #0078ff;
 }
@@ -605,6 +604,12 @@ a:hover {
   height: 100vh;
   position: relative;
   color: #fff;
+}
+
+@media (max-width: 767px) {
+  .intro {
+      height: 84vh; /* Set the height to 50% of the viewport height on small screens */
+  }
 }
 
 .intro .intro-content {
