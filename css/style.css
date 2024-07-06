@@ -856,6 +856,10 @@ a:hover {
   font-size: 1.4rem;
 }
 
+.work-img img{
+  aspect-ratio: 3/2;
+}
+
 .testimonial-box .comit {
   font-size: 2rem;
   color: #0078ff;
