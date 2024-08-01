@@ -42,13 +42,29 @@
 			padding-top: 5rem;
 			position: relative;
 			text-align: center;
-			z-index: 1; /* Default z-index */
+			z-index: 1;
 		}
 	
-		.img-container img {
-			max-width: 100%;
-			border-radius: 10px;
-		}
+        .img-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            animation: fadeInOut 6s ease-in-out infinite;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+        }
 	
 		@media (max-width: 768px) {
 			.hero {
@@ -120,7 +136,7 @@
 					<div class="content text-center">
 						<span class="subheading">Hello!</span>
 						<h1 class="mb-4 mt-3">I'm <span>Rohit Ghatal</span></h1>
-						<h2 class="mb-4">A Freelance Web Designer</h2>
+						<h2 class="mb-4">A <span id="typed-text"></span></h2>
 						<p>
 							<a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a>
 							<a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
@@ -134,8 +150,6 @@
 		</div>
 	</section>
 	
-	
-
 	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
 		<div class="container">
 			<div class="row d-flex">
@@ -574,9 +588,18 @@
 	<script src="js/aos.js"></script>
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
-
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	<script src="js/main.js"></script>
 
+	<script>
+		var typed = new Typed('#typed-text', {
+			strings: ["Freelancer", "Frontend Developer", "Backend Developer"],
+			typeSpeed: 50,
+			backSpeed: 50,
+			backDelay: 2000,
+			loop: true
+		});
+	</script>
+	
 </body>
-
 </html>
