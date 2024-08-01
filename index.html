@@ -35,7 +35,7 @@
 		.hero .text {
 			padding: 20px;
 			position: relative;
-			z-index: 2; /* Ensure text is above the image */
+			z-index: 2;
 		}
 	
 		.img-container {
@@ -69,20 +69,22 @@
 		@media (max-width: 768px) {
 			.hero {
 				padding: 10px 0;
+				height: 80vh;
 			}
 	
 			.hero .text {
 				padding: 15px;
-				color: white; /* Text color for better readability on the image background */
+				color: white; 
+				text-align: left;
 			}
 	
 			.content h1, .content h2 {
-				font-size: 1.5em; /* Adjust for readability */
+				font-size: 1.5em;
 			}
 	
 			.btn {
-				padding: 10px 20px; /* Larger touch targets */
-				margin-bottom: 10px; /* Space between buttons */
+				padding: 10px 20px;
+				margin-bottom: 10px; 
 			}
 	
 			.img-container {
@@ -99,7 +101,7 @@
 			.img-container img {
 				width: 100%;
 				height: 100%;
-				object-fit: contain;
+				object-fit: cover;
 				border-radius: 0;
 			}
 		}
@@ -134,7 +136,7 @@
 		<div class="container">
 			<div class="row d-flex align-items-center">
 				<div class="col-md-6 text d-flex align-items-center justify-content-center">
-					<div class="content text-center">
+					<div class="content text-left">
 						<span class="subheading">Hello!</span>
 						<h1 class="mb-4 mt-3">I'm <span>Rohit Ghatal</span></h1>
 						<h2 class="mb-4">A <span id="typed-text"></span></h2>
@@ -370,7 +372,7 @@
 						style="background-image: url(projectPhotos/gadgethub.png);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3><a href="#">GadgetHub (An E-commerce Webiste to buy Laptos, Mobiles & Smart watches)</a>
+							<h3><a href="#">GadgetHub (An E-commerce Webiste)</a>
 							</h3>
 							<p><a href="https://rohitghatal1.github.io/E-CommerceCite-GadjetHub-/" target="_blank"
 									class="text-light text-decoration-underline">visit (only static at this moment)</a>
@@ -382,7 +384,7 @@
 						style="background-image: url(projectPhotos/wordCounter.png);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3>Word Counter Using ReactJs (simple program for learing concept of React)</h3>
+							<h3>Word Counter Using ReactJs</h3>
 							<p><a href="#" target="_blank" class="text-light text-decoration-underline">visit</a></p>
 						</div>
 					</div>
