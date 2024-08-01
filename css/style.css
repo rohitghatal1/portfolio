@@ -63,6 +63,36 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
+/* style for go to top button  */
+
+#go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  font-weight: bolder;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
+}
+#go-to-top:hover {
+  background-color: #000;
+  color: #fff;
+}
+#go-to-top:focus {
+  outline: none;
+}
+
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;

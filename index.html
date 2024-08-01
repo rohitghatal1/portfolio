@@ -568,6 +568,7 @@
 		</div>
 	</footer>
 
+	<button id="go-to-top" title="Go to Top">&#x5e;</button>
 
 
 	<!-- loader -->
@@ -612,6 +613,22 @@
 				});
 			});
 		});
+
+		// Show or hide the button based on scroll position
+		$(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('#go-to-top').fadeIn();
+            } else {
+                $('#go-to-top').fadeOut();
+            }
+        });
+
+        // Scroll to the top when the button is clicked
+        $('#go-to-top').click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+
 	</script>
 	
 </body>
