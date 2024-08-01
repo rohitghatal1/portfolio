@@ -71,7 +71,7 @@
 				padding: 10px 0;
 			}
 	
-			.text {
+			.hero .text {
 				padding: 15px;
 				color: white; /* Text color for better readability on the image background */
 			}
@@ -86,19 +86,20 @@
 			}
 	
 			.img-container {
+				padding-top: 1rem;
 				position: absolute;
 				top: 0;
 				left: 0;
 				width: 100%;
 				height: 100%;
-				z-index: 0; /* Send image behind text */
-				opacity: 0.5; /* Optional: adjust image opacity for better text visibility */
+				z-index: 0;
+				opacity: 0.5;
 			}
 	
 			.img-container img {
 				width: 100%;
 				height: 100%;
-				object-fit: cover; /* Ensure the image covers the entire container */
+				object-fit: contain;
 				border-radius: 0;
 			}
 		}
@@ -199,7 +200,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+					<a href="#" class="services-1" onclick="event.preventDefault();">
 						<span class="icon">
 							<i class="flaticon-analysis"></i>
 						</span>
@@ -209,7 +210,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+					<a href="#" class="services-1" onclick="event.preventDefault();">
 						<span class="icon">
 							<i class="flaticon-ideas"></i>
 						</span>
@@ -220,7 +221,7 @@
 				</div>
 
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+					<a href="#" class="services-1" onclick="event.preventDefault();">
 						<span class="icon">
 							<i class="fas fa-mobile-alt"></i> <!-- Mobile icon -->
 						</span>
@@ -336,7 +337,7 @@
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Projects</h1>
 					<h2 class="mb-4">My Projects</h2>
-					<p>Here are some of my recnet projects.</p>
+					<p>Here are some of my recent projects.</p>
 				</div>
 			</div>
 			<div class="row">
@@ -522,10 +523,10 @@
 							interfaces. My journey began with a deep curiosity for website design, which has
 							since evolved into a fulfilling career dedicated to full stack Web Development.</p>
 							<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-								<li class="ftco-animate"><a href="https://www.facebook.com/rohit.rohit.ghatal/"><span class="fab fa-facebook-f"></span></a></li>
-								<li class="ftco-animate"><a href="https://www.instagram.com/_rohit.ghatal_/"><span class="fab fa-instagram"></span></a></li>
-								<li class="ftco-animate"><a href="https://www.linkedin.com/in/rohit-ghatal-7823111b4/"><span class="fab fa-linkedin-in"></span></a></li>
-								<li class="ftco-animate"><a href="https://github.com/rohitghatal1"><span class="fab fa-github"></span></a></li>
+								<li class="ftco-animate"><a href="https://www.facebook.com/rohit.rohit.ghatal/" target="_blank"><span class="fab fa-facebook-f"></span></a></li>
+								<li class="ftco-animate"><a href="https://www.instagram.com/_rohit.ghatal_/" target="_blank"><span class="fab fa-instagram"></span></a></li>
+								<li class="ftco-animate"><a href="https://www.linkedin.com/in/rohit-ghatal-7823111b4/" target="_blank"><span class="fab fa-linkedin-in"></span></a></li>
+								<li class="ftco-animate"><a href="https://github.com/rohitghatal1" target="_blank"><span class="fab fa-github"></span></a></li>
 							</ul>
 					</div>
 				</div>
@@ -558,7 +559,7 @@
 							<ul>
 								<li><span class="icon icon-map-marker"></span><span class="text">Thasikhel, Lalitpur, Nepal</span></li>
 								<li><a href="#"><span class="icon icon-phone"></span><span class="text">9803415229</span></a></li>
-								<li><a href="#"><span class="icon icon-envelope"></span><span class="text">rohitghatal@gmailcom</span></a></li>
+								<li><a href="#"><span class="icon icon-envelope"></span><span class="text">rohitghatal@gmail.com</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -597,8 +598,19 @@
 			strings: ["Freelancer", "Frontend Developer", "Backend Developer"],
 			typeSpeed: 50,
 			backSpeed: 50,
-			backDelay: 2000,
+			backDelay: 1500,
 			loop: true
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+			const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+			navLinks.forEach(link => {
+				link.addEventListener('click', () => {
+					const navbarCollapse = document.querySelector('.navbar-collapse');
+					const bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
+					bsCollapse.hide();
+				});
+			});
 		});
 	</script>
 	
