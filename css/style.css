@@ -68,7 +68,7 @@ body {
 #go-to-top {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 2.3rem;
   background-color: #fff;
   color: #000;
   border: none;
@@ -91,6 +91,24 @@ body {
 }
 #go-to-top:focus {
   outline: none;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555; /* Thumb color */
+  border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888; /* Thumb color on hover */
 }
 
 hr {
