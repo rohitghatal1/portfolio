@@ -1042,7 +1042,7 @@
       });
     </script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
       (function () {
@@ -1053,6 +1053,31 @@
         s1.charset = "UTF-8";
         s1.setAttribute("crossorigin", "*");
         s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script> -->
+
+    <script type="text/javascript">
+      var MyWidget_API = MyWidget_API || {};
+      var MyWidget_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src =
+          "https://lively-treacle-cb2db7.netlify.app//widget-loader.js?id=widget-demo-123";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+
+        window.MyWidget_Config = {
+          widgetId: "widget-demo-123",
+          messages: [
+            "Hi! How can we help you today?",
+            "Feel free to ask any questions!",
+            "We're available 24/7 to assist you.",
+          ],
+          theme: "default",
+        };
       })();
     </script>
   </body>
